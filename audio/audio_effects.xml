@@ -3,6 +3,7 @@
     <libraries>
         <library name="proxy" path="libeffectproxy.so"/>
         <library name="mmieffects" path="libmmieffectswrapper.so"/>
+        <library name="v4a_re" path="libv4a_re.so"/>
         <library name="bundle" path="libbundlewrapper.so"/>
         <library name="reverb" path="libreverbwrapper.so"/>
         <library name="visualizer" path="libvisualizer.so"/>
@@ -19,6 +20,7 @@
     <effects>
         <effect name="bassboost" library="bundle" uuid="8631f300-72e2-11df-b57e-0002a5d5c51b"/>
         <effect name="virtualizer" library="bundle" uuid="1d4033c0-8557-11df-9f2d-0002a5d5c51b"/>
+        <effect name="v4a_standard_re" library="v4a_re" uuid="90380da3-8536-4744-a6a3-5731970e640f"/>
         <effect name="equalizer" library="bundle" uuid="ce772f20-847d-11df-bb17-0002a5d5c51b"/>
         <effect name="volume" library="bundle" uuid="119341a0-8469-11df-81f9-0002a5d5c51b"/>
         <effect name="mmieffects" library="mmieffects" uuid="bce61ec2-eca4-445c-9dcb-91cc7cce01ba"/>
