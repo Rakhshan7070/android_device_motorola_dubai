@@ -226,4 +226,8 @@
         <item>2164</item> <!-- sensorLocationY -->
         <item>91</item> <!-- sensorRadius -->
     </integer-array>
+
+    <!-- Display color inversion availability -->
+    <bool name="config_displayInversionAvailable">false</bool>
+
 </resources>
