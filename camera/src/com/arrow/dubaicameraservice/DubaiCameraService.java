@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2023 ArrowOS
- * 
+ * SPDX-FileCopyrightText: 2023 ArrowOS
  * SPDX-License-Identifier: Apache-2.0
  */
 
