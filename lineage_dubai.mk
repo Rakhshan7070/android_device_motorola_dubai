@@ -20,21 +20,29 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := motorola edge 30
 
-# Matrixx
-MATRIXX_BUILD_TYPE := Official
-MATRIXX_MAINTAINER := JoseMCC
-MATRIXX_BATTERY := 4020.0mAh
-MATRIXX_CHIPSET := SM7325
-MATRIXX_DISPLAY := 1080x2400
+#Rising Flags
+TARGET_ENABLE_BLUR := true
 WITH_GMS := true
-TARGET_HAS_UDFPS := true
-TARGET_EXCLUDES_AUDIOFX := true
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_CORE_GMS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+TARGET_CORE_GMS_EXTRAS := true
+PRODUCT_PACKAGES += \
+   Photos \
+   MarkupGoogle \
+   AiWallpapers \
+   WallpaperEmojiPrebuilt \
+   PrebuiltDeskClockGoogle \
+   CalculatorGooglePrebuilt \
+   CalendarGooglePrebuilt \
+   Velvet
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=dubai_g \
+    RISING_CHIPSET="SD 778G+" \
+    RISING_MAINTAINER="Rakhshan"  \
     PRIVATE_BUILD_DESC="dubai_g-user 13 T1RDS33.116-33-15-1 06f6d-c0e7b release-keys"
 
 BUILD_FINGERPRINT := motorola/dubai_g/dubai:13/T1RDS33.116-33-15-1/06f6d-c0e7b:user/release-keys
+include vendor/lineage-priv/keys/keys.mk
