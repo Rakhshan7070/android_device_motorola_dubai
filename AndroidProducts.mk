@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_dubai.mk
+    $(LOCAL_DIR)/linegae_dubai.mk

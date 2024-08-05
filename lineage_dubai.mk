@@ -19,12 +19,17 @@ TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 TARGET_CORE_GMS := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
-
-PRODUCT_NAME := aosp_dubai
-PRODUCT_DEVICE := dubai
-PRODUCT_MANUFACTURER := motorola
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola edge 30
+TARGET_CORE_GMS_EXTRAS := true
+ PRODUCT_PACKAGES += \
+    Photos \
+    MarkupGoogle \
+    LatinIMEGooglePrebuilt \
+    AiWallpapers \
+    WallpaperEmojiPrebuilt \
+    PrebuiltDeskClockGoogle \
+    CalculatorGooglePrebuilt \
+    CalendarGooglePrebuilt \
+    Velvet
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
