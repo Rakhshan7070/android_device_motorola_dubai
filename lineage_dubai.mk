@@ -22,14 +22,11 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := false
 TARGET_CORE_GMS_EXTRAS := true
  PRODUCT_PACKAGES += \
     Photos \
-    MarkupGoogle \
-    LatinIMEGooglePrebuilt \
     AiWallpapers \
     WallpaperEmojiPrebuilt \
     PrebuiltDeskClockGoogle \
     CalculatorGooglePrebuilt \
-    CalendarGooglePrebuilt \
-    Velvet
+    CalendarGooglePrebuilt
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
