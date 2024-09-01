@@ -19,6 +19,9 @@ DEVICE_PATH := device/motorola/dubai
 # Inherit from motorola sm7325-common
 include device/motorola/sm7325-common/BoardConfigCommon.mk
 
+# Audio (Dolby)
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := dubai
 
