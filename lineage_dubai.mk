@@ -22,8 +22,20 @@ PRODUCT_MODEL := motorola edge 30
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
+# risingOS Flags
+TARGET_ENABLE_BLUR := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
+PRODUCT_PACKAGES += \
+    MarkupGoogle \
+    LatinIMEGooglePrebuilt \
+    Velvet
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=dubai_g \
+    RISING_CHIPSET="SD 77G+" \
+    RISING_MAINTAINER="Rakhshan"
     PRIVATE_BUILD_DESC="dubai_g-user 14 U1RD34.80-40 f0ea3-81bef release-keys"
 
 BUILD_FINGERPRINT := motorola/dubai_g/dubai:14/U1RD34.80-40/f0ea3-81bef:user/release-keys
