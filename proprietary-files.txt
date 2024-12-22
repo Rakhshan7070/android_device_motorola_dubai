@@ -1,4 +1,6 @@
-# All unpinned blobs below are extracted from dubai_g-user 14 U1RD34.80-40 f0ea3-81bef release-keys - RETAIL variant.
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from edge 30 (14 U1RDS34.80-40-3 11ee6-8c50b).
+## RETAIL variant
 
 # ACDB Data
 vendor/etc/acdbdata/Bluetooth_cal.acdb
