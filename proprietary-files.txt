@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from edge 30 (14 U1RDS34.80-40-3 11ee6-8c50b).
+## are from edge 30 (14 U1RDS34.80-40-5-3 b1f71-ff67e).
 ## RETAIL variant
 
 # ACDB Data
