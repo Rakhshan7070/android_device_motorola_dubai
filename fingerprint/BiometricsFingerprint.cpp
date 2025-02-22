@@ -18,8 +18,8 @@
 #include "BiometricsFingerprint.h"
 
 #include <android-base/logging.h>
-#include <fstream>
 #include <cmath>
+#include <fstream>
 #include <thread>
 
 #include <fcntl.h>
@@ -69,9 +69,9 @@ BiometricsFingerprint::BiometricsFingerprint() {
         }
 
         struct pollfd fodUiPoll = {
-            .fd = fd,
-            .events = POLLERR | POLLPRI,
-            .revents = 0,
+                .fd = fd,
+                .events = POLLERR | POLLPRI,
+                .revents = 0,
         };
 
         while (true) {
@@ -80,13 +80,14 @@ BiometricsFingerprint::BiometricsFingerprint() {
                 LOG(ERROR) << "failed to poll fd, err: " << rc;
                 continue;
             }
-            mMotoFingerprint->sendFodEvent(readBool(fd) ? NOTIFY_FINGER_DOWN : NOTIFY_FINGER_UP , {},
-                [](IMotFodEventResult, const hidl_vec<signed char>&) {});
+            mMotoFingerprint->sendFodEvent(readBool(fd) ? NOTIFY_FINGER_DOWN : NOTIFY_FINGER_UP, {},
+                                           [](IMotFodEventResult, const hidl_vec<signed char>&) {});
         }
     }).detach();
 }
 
-Return<uint64_t> BiometricsFingerprint::setNotify(const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
+Return<uint64_t> BiometricsFingerprint::setNotify(
+        const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
     return biometrics_2_1_service->setNotify(clientCallback);
 }
 
@@ -94,7 +95,8 @@ Return<uint64_t> BiometricsFingerprint::preEnroll() {
     return biometrics_2_1_service->preEnroll();
 }
 
-Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat, uint32_t gid, uint32_t timeoutSec) {
+Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
+                                                    uint32_t gid, uint32_t timeoutSec) {
     return biometrics_2_1_service->enroll(hat, gid, timeoutSec);
 }
 
@@ -118,7 +120,8 @@ Return<RequestStatus> BiometricsFingerprint::remove(uint32_t gid, uint32_t fid) 
     return biometrics_2_1_service->remove(gid, fid);
 }
 
-Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid, const hidl_string& storePath) {
+Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
+                                                            const hidl_string& storePath) {
     return biometrics_2_1_service->setActiveGroup(gid, storePath);
 }
 
