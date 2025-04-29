@@ -52,6 +52,8 @@ $(call inherit-product, hardware/motorola/dolby/setup.mk)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.dubai
 
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(LOCAL_PATH):libudfps_extension.dubai)
+
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
